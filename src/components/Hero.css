@@ -45,7 +45,7 @@
 }
 
 .hero-main-title {
-  font-size: 8rem;
+  font-size: clamp(2.5rem, 8vw, 8rem);
   font-weight: 900;
   font-family: 'Montserrat', 'Poppins', sans-serif;
   color: var(--accent);
@@ -58,7 +58,7 @@
 }
 
 .hero-main-title-sub {
-  font-size: 7rem;
+  font-size: clamp(2rem, 7vw, 7rem);
   font-weight: 900;
   font-family: 'Montserrat', 'Poppins', sans-serif;
   color: var(--accent);
