@@ -45,7 +45,7 @@
 }
 
 .hero-main-title {
-  font-size: clamp(2.5rem, 8vw, 8rem);
+  font-size: 8rem;
   font-weight: 900;
   font-family: 'Montserrat', 'Poppins', sans-serif;
   color: var(--accent);
@@ -58,7 +58,7 @@
 }
 
 .hero-main-title-sub {
-  font-size: clamp(2rem, 7vw, 7rem);
+  font-size: 7rem;
   font-weight: 900;
   font-family: 'Montserrat', 'Poppins', sans-serif;
   color: var(--accent);
@@ -242,85 +242,71 @@ transform:translateY(0px);
     letter-spacing: 5px;
   }
 
-  .tags-container {
-    width: 600px;
-    height: 250px;
-    transform: scale(0.85);
-  }
 }
 
 @media (max-width: 768px) {
-  .hero {
-    padding-top: 80px;
+   .hero {
+    padding-top: 120px;
     min-height: 90vh;
   }
-
   .hero-main-title {
-    font-size: 2.2rem;
+   font-size: 3.2rem;
     letter-spacing: 2px;
   }
 
   .hero-main-title-sub {
-    font-size: 2rem;
+     font-size: 3rem;
     letter-spacing: 2px;
   }
 
   .tags-container {
-    width: 100%;
-    max-width: 350px;
-    height: 180px;
-    transform: scale(0.5);
-    margin-top: 30px;
+scale: 0.8;
   }
 
-  .floating-tag {
-    padding: 16px 20px;
-    font-size: 0.6rem;
-    letter-spacing: 1.3px;
-  }
+ 
 }
 
 @media (max-width: 425px) {
+   .hero {
+    padding-top: 120px;
+    min-height: 90vh;
+  }
   .hero-main-title {
-    font-size: 1.6rem !important;
-    letter-spacing: 1.5px !important;
+   font-size: 3.2rem;
+    letter-spacing: 2px;
   }
 
   .hero-main-title-sub {
-    font-size: 1.4rem !important;
-    letter-spacing: 1.5px !important;
+     font-size: 3rem;
+    letter-spacing: 2px;
   }
 
   .tags-container {
-    max-width: 280px;
-    height: 150px;
-    transform: scale(0.4);
-    margin-top: 20px;
+
+    scale: 0.5;
   }
 
-  .floating-tag {
-    padding: 14px 18px;
-    font-size: 0.5rem;
-    letter-spacing: 1px;
-  }
+
 }
 
 @media (max-width: 375px) {
+   .hero {
+    padding-top: 120px;
+    min-height: 90vh;
+  }
   .hero-main-title {
-    font-size: 1.4rem;
-    letter-spacing: 1px;
+   font-size: 3.2rem;
+    letter-spacing: 2px;
   }
 
   .hero-main-title-sub {
-    font-size: 1.2rem;
-    letter-spacing: 1px;
+     font-size: 3rem;
+    letter-spacing: 2px;
   }
 
   .tags-container {
-    max-width: 250px;
-    height: 130px;
-    transform: scale(0.35);
-    margin-top: 15px;
+  scale: 0.45;
+    
   }
 }
 
