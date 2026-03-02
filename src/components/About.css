@@ -13,6 +13,10 @@
     grid-template-columns: 1fr;
     gap: 60px;
   }
+
+  @media (max-width: 768px) {
+    gap: 40px;
+  }
 }
 
 .about-intro {
@@ -75,6 +79,30 @@
   margin-bottom: 30px;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .about-intro {
+    font-size: 1.1rem;
+  }
+
+  .about-description {
+    font-size: 0.95rem;
+  }
+
+  .skills-title,
+  .software-title {
+    font-size: 1.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
 }
 
 .skills-list {

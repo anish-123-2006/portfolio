@@ -551,4 +551,43 @@
   .card-title {
     font-size: 1.1rem;
   }
+
+  .subsection-title {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+
+  .featured-videos,
+  .featured-colorgrade {
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .featured-videos iframe,
+  .featured-colorgrade iframe {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .featured-travel {
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .featured-travel iframe {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .subsection-title {
+    font-size: 1.5rem;
+  }
+
+  .featured-videos iframe,
+  .featured-colorgrade iframe,
+  .featured-personal iframe {
+    max-width: 100%;
+  }
 }
