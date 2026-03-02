@@ -280,15 +280,15 @@ transform:translateY(0px);
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 425px) {
   .hero-main-title {
-    font-size: 1.6rem;
-    letter-spacing: 1.5px;
+    font-size: 1.6rem !important;
+    letter-spacing: 1.5px !important;
   }
 
   .hero-main-title-sub {
-    font-size: 1.4rem;
-    letter-spacing: 1.5px;
+    font-size: 1.4rem !important;
+    letter-spacing: 1.5px !important;
   }
 
   .tags-container {
