@@ -1,0 +1,105 @@
+.services {
+  background: rgba(42, 42, 42, 0.85);
+  border-top: 1px solid rgba(255, 255, 0, 0.1);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 255, 0, 0.05), rgba(255, 255, 0, 0.02));
+  border: 1px solid rgba(255, 255, 0, 0.1);
+  padding: 40px 30px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 255, 0, 0.3);
+  background: linear-gradient(135deg, rgba(255, 255, 0, 0.08), rgba(255, 255, 0, 0.04));
+  box-shadow: 0 10px 24px rgba(255, 255, 0, 0.14);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card:hover .service-icon {
+  color: var(--accent);
+  transform: scale(1.1);
+}
+
+.service-card:hover .service-accent {
+  width: 100%;
+}
+
+.service-icon {
+  color: var(--accent);
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.service-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.service-description {
+  font-size: 0.95rem;
+  color: var(--subtext);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.service-accent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  transition: width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    padding: 30px 20px;
+  }
+
+  .service-title {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,231 @@
+.hero {
+  padding-top: 100px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(26, 26, 26, 0.75);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.interactive-gradient {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(255, 255, 0, 0.05) 0%, transparent 60%),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 0, 0.03) 0%, transparent 60%);
+}
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.hero-main-title {
+  font-size: 8rem;
+  font-weight: 900;
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+  animation: titleFadeIn 1s ease-out;
+}
+
+.hero-main-title-sub {
+  font-size: 7rem;
+  font-weight: 900;
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+  animation: titleFadeIn 1.2s ease-out;
+}
+
+@keyframes titleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* TAG CONTAINER */
+
+.tags-container{
+position:relative;
+width:820px;
+height:320px;
+margin-top:60px;
+/* zoom: 1.3; */
+
+}
+
+/* BASE TAG STYLE */
+
+.floating-tag{
+
+position:absolute;
+
+padding:25px 28px;
+border-radius:999px;
+
+font-size:0.8rem;
+font-weight:800;
+font-family:'Montserrat',sans-serif;
+
+text-transform:uppercase;
+letter-spacing:2px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+white-space:nowrap;
+
+cursor:pointer;
+
+animation:floatingDrift 8s ease-in-out infinite;
+
+}
+
+/* TAG POSITIONS */
+
+/* CINEMATOGRAPHY */
+.floating-tag:nth-child(1){
+top:40px;
+left: 5px;
+z-index:2;
+rotate: 10deg;
+}
+
+/* EDITING */
+.floating-tag:nth-child(2){
+top:95px;
+left:207px;
+z-index:3;
+rotate: -5deg;
+}
+
+/* MOTION GRAPHICS */
+.floating-tag:nth-child(3){
+top:-1px;
+left:260px;
+z-index:4;
+rotate: -20deg;
+}
+
+/* PROFESSIONAL */
+.floating-tag:nth-child(4){
+top:10px;
+left:460px;
+z-index:6;
+rotate: 30deg;
+}
+
+/* VFX */
+.floating-tag:nth-child(5){
+top:20px;
+right:90px;
+rotate: -10deg;
+}
+
+/* STORYTELLING */
+.floating-tag:nth-child(6){
+top:140px;
+right:60px;
+rotate: 70deg
+}
+
+/* COLOR GRADING */
+.floating-tag:nth-child(7){
+top:175px;
+left:320px;
+rotate: -20deg;
+}
+
+/* CINEMATIC */
+.floating-tag:nth-child(8){
+top:170px;
+left:180px;
+rotate:20deg;
+}
+
+/* POST PRODUCTION */
+.floating-tag:nth-child(9){
+top:85px;
+right:230px;
+}
+
+/* FILLED TAG */
+
+.floating-tag.filled{
+background:var(--accent);
+color:#111;
+
+box-shadow:
+0 0 25px rgba(255,255,0,0.35),
+0 0 60px rgba(255,255,0,0.15);
+}
+
+/* OUTLINE TAG */
+
+.floating-tag.outlined{
+background:transparent;
+color:var(--accent);
+
+border:2px solid var(--accent);
+
+box-shadow:
+0 0 20px rgba(255,255,0,0.2);
+}
+
+/* FLOATING ANIMATION */
+
+@keyframes floatingDrift{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-12px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
