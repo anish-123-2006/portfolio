@@ -20,7 +20,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--bg);
-  background-image: url('/portfolio/bg (2).png');
+  background-image: url('/bg (2).png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
