@@ -144,6 +144,52 @@
   border-top: 1px solid rgba(255, 255, 0, 0.15);
 }
 
+.motion-subsection {
+  margin-top: 80px;
+  padding-top: 60px;
+  border-top: 1px solid rgba(255, 255, 0, 0.15);
+}
+
+.longform-subsection {
+  margin-top: 80px;
+  padding-top: 60px;
+  border-top: 1px solid rgba(255, 255, 0, 0.15);
+}
+
+.longform-drive-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-items: center;
+  margin-bottom: 36px;
+  padding: 20px;
+}
+
+.longform-drive-card {
+  width: 100%;
+  max-width: 420px;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.longform-drive-thumb-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 0, 0.22);
+  box-shadow: 0 20px 60px rgba(255, 255, 0, 0.2);
+  background: #000;
+  transition: all 0.3s ease;
+}
+
+.longform-drive-card:hover .longform-drive-thumb-wrap {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 70px rgba(255, 255, 0, 0.3);
+  border-color: rgba(255, 255, 0, 0.4);
+}
+
 .subsection-title {
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
@@ -162,6 +208,74 @@
   margin-bottom: 50px;
 }
 
+.shortform-drive-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+  margin-bottom: 36px;
+  padding: 20px;
+}
+
+.shortform-drive-card {
+  width: 100%;
+  max-width: 200px;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.shortform-drive-thumb-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 0, 0.22);
+  box-shadow: 0 20px 60px rgba(255, 255, 0, 0.2);
+  background: #000;
+  transition: all 0.3s ease;
+}
+
+.shortform-drive-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.shortform-drive-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(4px);
+}
+
+.shortform-drive-title {
+  display: block;
+  text-align: center;
+  margin-top: 12px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.shortform-drive-card:hover .shortform-drive-thumb-wrap {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 70px rgba(255, 255, 0, 0.3);
+  border-color: rgba(255, 255, 0, 0.4);
+}
+
 .featured-reels {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -172,6 +286,8 @@
 }
 
 .featured-reels iframe {
+  width: 200px;
+  height: 356px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(255, 255, 0, 0.2);
@@ -193,6 +309,20 @@
 }
 
 @media (max-width: 768px) {
+  .longform-drive-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .longform-drive-card {
+    max-width: 320px;
+  }
+
+  .shortform-drive-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
   .featured-reels {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -200,8 +330,8 @@
   
   .featured-reels iframe {
     width: 100%;
-    max-width: 350px;
-    height: 622px;
+    max-width: 175px;
+    height: 311px;
   }
 }
 
@@ -313,6 +443,8 @@
 }
 
 .featured-grading iframe {
+  width: 200px;
+  height: 356px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(255, 255, 0, 0.2);
@@ -336,8 +468,8 @@
 @media (max-width: 768px) {
   .featured-grading iframe {
     width: 100%;
-    max-width: 350px;
-    height: auto;
+    max-width: 175px;
+    height: 311px;
   }
 }
 
@@ -464,6 +596,8 @@
 }
 
 .featured-travel iframe {
+  width: 200px;
+  height: 356px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(255, 255, 0, 0.2);
@@ -487,8 +621,8 @@
 @media (max-width: 768px) {
   .featured-travel iframe {
     width: 100%;
-    max-width: 350px;
-    height: 622px;
+    max-width: 175px;
+    height: 311px;
   }
 }
 
@@ -509,6 +643,8 @@
 }
 
 .featured-personal iframe {
+  width: 200px;
+  height: 356px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(255, 255, 0, 0.2);
@@ -532,8 +668,8 @@
 @media (max-width: 768px) {
   .featured-personal iframe {
     width: 100%;
-    max-width: 350px;
-    height: 622px;
+    max-width: 175px;
+    height: 311px;
   }
 }
 
@@ -576,7 +712,8 @@
 
   .featured-travel iframe {
     width: 100%;
-    max-width: 280px;
+    max-width: 175px;
+    height: 311px;
   }
 }
 
