@@ -1,6 +1,7 @@
 import Navbar from "./navbar";
 import Hero from "./hero";
 import About from "./about";
+import Background from "./background";
 import Myskill from "./myskill";
 import Myproject from "./myproject";
 import Mycontact from "./mycontact";
@@ -17,6 +18,10 @@ return(
 
   <section id="About">
     <About />
+  </section>
+
+  <section id="Background">
+    <Background />
   </section>
 
   <section id="Skills">

@@ -27,7 +27,7 @@ Menu closes → Page scrolling enabled.
 Component unmounts → Reset scrolling just in case.*/
  },[menuOpen]);
 
- const navLinks=["Home","About","Skills","Project","Contact"];
+ const navLinks=["Home","About","Background","Skills","Project","Contact"];
 
 return <div>
     <div className="navdiv1">
@@ -45,7 +45,7 @@ document.getElementById(`${link}`)
 }
       >{link}</button>
     ))}
-    <button className="resumebtn">Resume</button>
+    <button className="resumebtn" onClick={()=>document.getElementById("Contact").scrollIntoView({behavior:"smooth"})}>Let's connect</button>
 </div>
 
 {/* hamburger button */}
@@ -73,14 +73,14 @@ onClick={()=>setMenuopen((prev)=>!prev)}
         {link}
       </button>
     ))}
-    <button className="resumebtn mobile-resumebtn" onClick={()=>setMenuopen(false)}>Resume</button>
+    <button className="resumebtn mobile-resumebtn" onClick={()=>{setMenuopen(false); document.getElementById("Contact").scrollIntoView({behavior:"smooth"})}}>Let's connect</button>
   </nav>
 </div>
 
 {/* backdrop */}
 {menuOpen &&
 (
-        <div className="menu-backdrop" onClick={() => setMenuOpen(false)} />
+        <div className="menu-backdrop" onClick={() => setMenuopen(false)} />
 
         /*Menu opens → Backdrop appears behind it.
 Click backdrop → Menu closes, backdrop disappears.

@@ -1,10 +1,5 @@
-import React, { useState } from 'react';
-// Change "Linkedin" to "Linkedin" (lowercase 'd')
-// Replace your current lucide import with this exact line:
-import { ArrowUpRight, GitHub, Linkedin, Mail, Code2, Layers, ExternalLink } from 'lucide-react';
+import { ArrowUpRight, GitHub, Linkedin, Mail, Code2, Layers } from 'lucide-react';
 const Portfolio = () => {
-  const [hoveredProject, setHoveredProject] = useState(null);
-
   const projects = [
     {
       id: "01",
@@ -79,12 +74,10 @@ const Portfolio = () => {
         <p className="text-sm uppercase tracking-widest text-[#a3a3a3] mb-12">Selected Projects</p>
         
         <div className="border-t border-neutral-800">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <div
               key={project.id}
               className="group relative border-b border-neutral-800 py-12 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer transition-all duration-500"
-              onMouseEnter={() => setHoveredProject(index)}
-              onMouseLeave={() => setHoveredProject(null)}
             >
               {/* Dynamic subtle background hover effect */}
               <div className="absolute inset-0 bg-neutral-900/0 group-hover:bg-neutral-900/30 transition-colors duration-500 -z-10" />

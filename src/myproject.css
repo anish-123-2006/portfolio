@@ -157,7 +157,11 @@
     gap:15px;
 }
 
-.project-buttons button{
+.project-buttons a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
     padding:14px 24px;
 
     border:none;
@@ -168,12 +172,14 @@
 
     font-size:0.95rem;
 
+    text-decoration:none;
+
     transition:0.3s ease;
 }
 
 /* LIVE DEMO */
 
-.project-buttons button:first-child{
+.project-buttons a:first-child{
     background:linear-gradient(
         135deg,
         #9333ea,
@@ -183,7 +189,7 @@
     color:white;
 }
 
-.project-buttons button:first-child:hover{
+.project-buttons a:first-child:hover{
     transform:translateY(-3px);
 
     box-shadow:
@@ -192,7 +198,7 @@
 
 /* GITHUB */
 
-.project-buttons button:last-child{
+.project-buttons a:last-child{
     background:transparent;
 
     border:1px solid rgba(255,255,255,0.15);
@@ -200,7 +206,7 @@
     color:white;
 }
 
-.project-buttons button:last-child:hover{
+.project-buttons a:last-child:hover{
     border-color:#a855f7;
 }
 
@@ -219,6 +225,32 @@
     border-radius:20px;
 
     transition:0.5s ease;
+}
+
+.project-placeholder{
+    min-height:280px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    padding:30px;
+    text-align:center;
+    background:
+        radial-gradient(circle at 30% 20%, rgba(192,38,211,.45), transparent 45%),
+        linear-gradient(145deg, #171120, #090909);
+    color:white;
+}
+
+.project-placeholder span{
+    font-size:clamp(2rem, 5vw, 4rem);
+    font-weight:700;
+    letter-spacing:-.05em;
+}
+
+.project-placeholder small{
+    color:#d4d4d8;
+    letter-spacing:1px;
 }
 
 .project-card:hover .project-image img{
@@ -280,7 +312,7 @@
         flex-direction:column;
     }
 
-    .project-buttons button{
+    .project-buttons a{
         width:100%;
     }
 

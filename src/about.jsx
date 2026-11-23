@@ -8,13 +8,13 @@ function About(){
     <div>
     <h4>ABOUT ME</h4>
     <p>
-        Hi, I'm Anish — a Computer Science student, aspiring frontend developer, and video editor who spends an unhealthy amount of time turning ideas into pixels.
+       Hi, I'm Anish — a Computer Science student and full-stack developer who enjoys turning ideas into useful, polished web products.
 <br></br>
-When I'm not debugging code that worked perfectly five minutes ago, you'll find me crafting engaging videos in Premiere Pro and After Effects, building web projects with HTML, CSS, JavaScript, and React, or learning something new to level up my skills.
+I work across the stack: shaping responsive interfaces with HTML, CSS, JavaScript, and React, connecting them to APIs and data, and learning the engineering practices that make products dependable.
 <br></br>
-I enjoy blending creativity with technology—whether it's designing smooth user experiences, creating motion graphics, or developing interactive web applications. My goal is simple: build things that not only work but also leave a lasting impression.
+I enjoy blending creativity with technology—whether that means designing a smooth user experience, building an interactive application, or making a feature feel simple and intuitive. My goal is to build products that are useful, maintainable, and memorable.
 <br></br>
-Currently, I'm focused on sharpening my frontend development skills, exploring modern web technologies, and proving that "I'll fix it later" is not a sustainable development strategy.
+Currently, I'm focused on growing as a full-stack developer, strengthening my backend and database fundamentals, and shipping better end-to-end projects.
     </p>
     </div>
  

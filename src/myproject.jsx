@@ -1,55 +1,55 @@
 import { useState } from "react";
 import "./myproject.css";
-import portfolioimg from "./assets/portfolio.png";
-import weatherimg from "./assets/weather.png";
-import todoimg from "./assets/todo.png";
-import spotifyimg from "./assets/spotify.png";
+import civiclensimg from "./assets/civiclens.png";
+import meshlyimg from "./assets/meshly.png";
 import movieimg from "./assets/moviefinder.png";
+import portfolioimg from "./assets/portfolio.png";
+import spotifyimg from "./assets/spotify.png";
 
 const projects = [
   {
     number: "01",
-    category: "REACT DEVELOPMENT",
-    title: "Movie App",
-    desc: "A movie browsing application built with React and TMDB API. Users can explore trending movies, search titles and view detailed movie information.",
-    tech: ["React", "TMDB API", "CSS"],
-    image: movieimg,
-    alt: "Movie App",
-    livebtn: "https://moviefinder-lo5g.vercel.app/",
-    gitbtn: "https://github.com/anish-123-2006/moviefinder",
+    category: "FULL-STACK COLLABORATIVE WIKI",
+    title: "Meshly",
+    desc: "A full-stack collaborative Wiki application with authentication, PostgreSQL, Redis caching, cloud storage, transactional emails, and AI-powered article summarization.",
+    tech: ["Next.js", "TypeScript", "PostgreSQL", "Drizzle ORM", "Redis", "Vercel AI"],
+    image: meshlyimg,
+    alt: "Meshly collaborative Wiki application",
+    livebtn: "https://wiki-masters-gray.vercel.app/",
+    gitbtn: "https://github.com/anish-123-2006/Meshly",
   },
   {
     number: "02",
-    category: "REACT DEVELOPMENT",
+    category: "AI-POWERED CIVIC PWA",
+    title: "CivicLens",
+    desc: "An AI-powered civic issue reporting Progressive Web App with image uploads, GPS capture, Firebase storage, Google Maps tracking, and smart routing for high-priority reports.",
+    tech: ["React", "Vite", "TypeScript", "Firebase", "Google Maps API", "Gemini API"],
+    image: civiclensimg,
+    alt: "CivicLens civic issue reporting application",
+    livebtn: "https://anish-123-2006.github.io/CivicLens/",
+    gitbtn: "https://github.com/anish-123-2006/CivicLens",
+  },
+  {
+    number: "03",
+    category: "FRONTEND APPLICATION",
     title: "Portfolio Website",
-    desc: "A modern portfolio website built to showcase my skills, projects and frontend development journey with a premium UI.",
-    tech: ["React", "CSS", "Responsive Design"],
+    desc: "A responsive portfolio application built to present my work, skills, and developer journey through a polished, accessible interface.",
+    tech: ["React", "Next.js", "TypeScript"],
     image: portfolioimg,
     alt: "Portfolio Website",
     livebtn: "https://vite-project-eight-ruby.vercel.app/",
     gitbtn: "https://github.com/anish-123-2006/portfolio2",
   },
   {
-    number: "03",
-    category: "JAVASCRIPT DEVELOPMENT",
-    title: "Weather App",
-    desc: "A weather forecasting application that fetches real-time weather data from an API and displays current conditions with a clean user interface.",
-    tech: ["JavaScript", "Weather API", "CSS"],
-    image: weatherimg,
-    alt: "Weather App",
-    livebtn: "https://anish-123-2006.github.io/weather-app/",
-    gitbtn: "https://github.com/anish-123-2006/weather-app",
-  },
-  {
     number: "04",
-    category: "JAVASCRIPT DEVELOPMENT",
-    title: "To Do App",
-    desc: "A task management application that stores data in browser local storage, allowing users to manage tasks even after refreshing the page.",
-    tech: ["JavaScript", "Local Storage", "CSS"],
-    image: todoimg,
-    alt: "To Do App",
-    livebtn: "https://anish-123-2006.github.io/todo/",
-    gitbtn: "https://github.com/anish-123-2006/todo",
+    category: "MOVIE DISCOVERY APPLICATION",
+    title: "Movie Finder",
+    desc: "A responsive movie discovery web app fetching popular and searched movies from the TMDB API, with favorites persisted in localStorage across sessions.",
+    tech: ["React", "Vite", "TMDB API"],
+    image: movieimg,
+    alt: "Movie Finder movie discovery application",
+    livebtn: "https://moviefinder-jade.vercel.app/",
+    gitbtn: "https://github.com/anish-123-2006/moviefinder",
   },
   {
     number: "05",
@@ -61,6 +61,17 @@ const projects = [
     alt: "Spotify Clone",
     livebtn: "https://anish-123-2006.github.io/spotify_clone/",
     gitbtn: "https://github.com/anish-123-2006/spotify_clone",
+  },
+  {
+    number: "06",
+    category: "CYBERSECURITY TOOL",
+    title: "SQLi Scanner",
+    desc: "A Python-based SQL injection testing tool using basic, Boolean-based, and time-based detection with response comparison and structured JSON reports.",
+    tech: ["Python", "Requests", "SQL Injection", "HTTP Analysis", "JSON"],
+    alt: "SQLi Scanner cybersecurity testing tool",
+    placeholderText: "Python security testing tool",
+    livebtn: "https://github.com/anish-123-2006/SQLi_scanner",
+    gitbtn: "https://github.com/anish-123-2006/SQLi_scanner",
   },
 ];
 
@@ -87,7 +98,14 @@ function ProjectCard({ project, reverse }) {
         </div>
       </div>
       <div className="project-image">
-        <img src={project.image} alt={project.alt} />
+        {project.image ? (
+          <img src={project.image} alt={project.alt} />
+        ) : (
+          <div className="project-placeholder" role="img" aria-label={project.alt}>
+            <span>{project.title}</span>
+            <small>{project.placeholderText}</small>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -103,7 +121,7 @@ function Myproject() {
       <div className="project-header">
         <h4>MY PROJECTS</h4>
         <h1>Things I've Built</h1>
-        <p>A collection of projects that showcase my skills, creativity and passion for building modern web experiences.</p>
+        <p>A collection of projects showing how I approach interfaces, API integration, product thinking, and the details that make web experiences feel complete.</p>
       </div>
 
       {/* DESKTOP - all cards stacked */}

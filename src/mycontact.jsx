@@ -20,8 +20,8 @@ function Mycontact() {
         </h1>
 
         <p>
-          Looking for a frontend developer?
-          Let's create something amazing together.
+          Looking for a full-stack developer?
+          Let's build something useful together.
         </p>
       </div>
 
@@ -100,15 +100,15 @@ function Mycontact() {
 
           <p>
             I'm currently open to freelance projects,
-            internships and collaboration opportunities.
+            internships, and collaboration opportunities across the stack.
           </p>
 
           <div className="services">
 
             <div className="service-box">
-              <h4>Frontend Development</h4>
+              <h4>Full-Stack Development</h4>
               <p>
-                React, JavaScript, Responsive Design
+                React, JavaScript, API integration, responsive design
               </p>
             </div>
 
@@ -165,7 +165,7 @@ function Mycontact() {
 
           <div>
             <h3>Open For Opportunities</h3>
-            <p>Frontend • Video Editing • Freelance</p>
+            <p>Full-stack development • Video editing • Freelance</p>
           </div>
         </div>
 

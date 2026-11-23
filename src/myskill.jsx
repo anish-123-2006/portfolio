@@ -2,8 +2,33 @@ import"./myskill.css"
 function Myskill(){
 return <div  className="skillmain">
     <div >
-        <h3>MY SKILL</h3>
+        <h3>FULL-STACK TOOLKIT</h3>
+        <p className="skills-intro">
+            Building blocks I use to move from a product idea to a working, deployed experience.
+        </p>
     </div >
+    <div className="skill-list" aria-label="Full-stack skills">
+        <span>React</span>
+        <span>Next.js</span>
+        <span>TypeScript</span>
+        <span>Tailwind CSS</span>
+        <span>Node.js</span>
+        <span>Express.js</span>
+        <span>REST APIs</span>
+        <span>PostgreSQL</span>
+        <span>Drizzle ORM</span>
+        <span>MongoDB</span>
+        <span>Redis</span>
+        <span>JWT Authentication</span>
+        <span>Vercel</span>
+        <span>Firebase</span>
+        <span>Google Gemini API</span>
+        <span>GitHub Actions</span>
+        <span>Git & GitHub</span>
+        <span>SQL</span>
+        <span>C / C++</span>
+        <span>Python</span>
+    </div>
     <div className="skill-slider">
     <div  className="skills-grid" >
      <div className="icon-float text-orange-600"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"></path></svg></div>
